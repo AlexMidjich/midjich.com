@@ -1,0 +1,390 @@
+*{
+ margin: 0;
+}
+h1{
+ font-size: 80px;
+ line-height: 200%;
+}
+h3{
+ font-size: 50px;
+}
+p{
+ font-size: 18px;
+ line-height: 150%;
+}
+a {
+ color: #333333;
+ text-decoration: none;
+}
+a:visited{
+ color: #333333;
+}
+.portfoliobtn a{
+ color: #f6f6f6;
+}
+.portfoliobtn a:visited{
+ color: #f6f6f6;
+}
+
+#intro{
+ background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
+ background: -webkit-linear-gradient(left top, #2AB7FF, #5EFFB2);
+ background: -o-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ background: -moz-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+#intro h1{
+ color: #f6f6f6;
+}
+#intro h3{
+ color: #f6f6f6;
+}
+#contactinfo{
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ padding-top: 100px;
+}
+.roundbtn{
+ margin: 10px;
+ background-color: #ffffff;
+ border-radius: 50%;
+ color: #333333;
+ font-size: 30px;
+ width: 70px;
+ height: 70px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+}
+.roundbtn .tooltiptext{
+ visibility: hidden;
+ width: 120px;
+ top: 100%;
+ left: 50%;
+ margin-left: -60px;
+ background-color: black;
+ color: #fff;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ /* Position the tooltip */
+ position: absolute;
+ z-index: 1;
+}
+.roundbtn:hover .tooltiptext {
+ visibility: visible;
+}
+/*Slide in menu*/
+#sidemenu{
+ width: 70px;
+ height: 300px;
+ background-color: rgba(0, 0, 0, 0.8);
+ position: fixed;
+ top: 20%;
+ z-index: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+.hidden{
+ opacity: 0;
+}
+.slideIn{
+ opacity: 1;
+ transition: opacity 0.5s ease-in-out;
+}
+.roundbtn_side{
+ margin: 10px;
+ background-color: #ffffff;
+ border-radius: 50%;
+ color: #333333;
+ font-size: 20px;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+}
+.roundbtn_side .tooltiptext{
+ visibility: hidden;
+ width: 120px;
+ top: -5px;
+ left: 105%;
+ background-color: black;
+ color: #fff;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ /* Position the tooltip */
+ position: absolute;
+ z-index: 1;
+}
+.roundbtn_side:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Section for portfolio*/
+#portfolio{
+ width: 100%;
+ height: auto;
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#portfolio h1 {
+ color: #333333;
+ text-align: center;
+ padding-bottom: 20px;
+}
+/*Works as a wrapper for all the cases*/
+.column{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ width: 100%;
+ justify-content: center;
+}
+/*Divides the cases into two columns*/
+.columns-2{
+ width: 45%;
+ padding: 1px;
+ height: 400px;
+}
+.columns-2 div{
+ background-size: cover;
+ background-position: center;
+ height: 400px;
+ width: 100%;
+}
+/*A textcontainer that is places over the different cases to present some info*/
+.txtcontainer{
+ background-color: rgba(42, 183, 255, 0.8);
+ width: 100%;
+ height: 300px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ opacity: 0;
+ transition: 200ms ease-in-out;
+}
+.txtcontainer:hover{
+ opacity: 1;
+}
+.txtcontainer h2{
+ color: #f6f6f6;
+ line-height: 200%;
+}
+.txtcontainer p{
+ color: #f6f6f6;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+.txtcontainer button{
+ background-color: transparent;
+ border: 2px solid #ffffff;
+ border-radius: 50px;
+ width: 150px;
+ color: #f6f6f6;
+ font-size: 16px;
+ padding: 10px;
+ margin-top: 20px;
+}
+
+/*Section for workprocess*/
+#workprocess{
+ background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
+ background: -webkit-linear-gradient(left top, #2AB7FF, #5EFFB2);
+ background: -o-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ background: -moz-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ width: 100%;
+ height: auto;
+}
+#workprocess h1 {
+ color: #f6f6f6;
+ text-align: center;
+}
+.columns-3{
+ width: 30%;
+ padding: 15px;
+ height: auto;
+}
+.worktxt{
+ text-align: center;
+ color: #f6f6f6;
+}
+.worktxt i{
+ font-size: 80px;
+ padding: 20px;
+}
+.worktxt h3{
+ padding-bottom: 10px;
+}
+
+/*Contact section*/
+#contact{
+ width: 100%;
+ height: auto;
+ background-color: #ffffff;
+}
+#contact h1 {
+ color: #333333;
+ text-align: center;
+ padding-bottom: 20px;
+}
+.contactcontent{
+ width: 100%;
+ height: auto;
+ display: flex;
+ flex-direction: row;
+}
+.contactinfo{
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+}
+.contactinfo p{
+ padding-left: 20px;
+ font-size: 22px;
+ line-height: 175%;
+ color: #333333;
+}
+.contactform{
+ width: 50%;
+ height: auto;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+}
+.roundbtn_contact{
+ margin: 10px;
+ background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
+ border-radius: 50%;
+ color: #f6f6f6;
+ font-size: 20px;
+ width: 50px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+form{
+ display: flex;
+ flex-direction: column;
+ width: 50%;
+}
+.msginput {
+ width: 100%;
+ height: 30px;
+ border: none;
+ border-bottom: 1px solid;
+ margin-bottom: 20px;
+ color: #333333;
+ font-size: 22px;
+}
+#msg{
+ height: 100px;
+ border: 1px solid;
+ color: #333333;
+ font-size: 22px;
+}
+#skicka{
+ border-radius: 10px;
+ background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
+ background: -webkit-linear-gradient(left top, #2AB7FF, #5EFFB2);
+ background: -o-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ background: -moz-linear-gradient(bottom right, #2AB7FF, #5EFFB2);
+ border: none;
+ color: #f6f6f6;
+ padding: 10px;
+ width: 50%;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ font-size: 22px;
+ align-self: center;
+}
+footer{
+ background-color: #333333;
+ height: 100px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+footer p{
+ color: #f6f6f6;
+}
+/*Media query for mobiledevices*/
+@media (max-width: 1000px){
+h1{
+ font-size: 80px;
+ }
+ p{
+  font-size: 25px;
+  line-height: 150%;
+ }
+ #sidemenu{
+  display: none;
+ }
+ .roundbtn{
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #333333;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .columns-1{
+  width: 100%;
+  padding-top: 20px;
+  height: auto;
+ }
+.columns-2 div{
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+ }
+ .txtcontainer h2{
+  color: #f6f6f6;
+  font-size: 50px;
+  line-height: 200%;
+ }
+ .contactcontent{
+  flex-direction: column;
+  align-items: center;
+ }
+ .contactinfo{
+  width: 80%;
+  justify-content: center;
+ }
+ .contactinfo p{
+  font-size: 32px;
+ }
+ .contactform{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ }
+ #skicka{
+  font-size: 36px;
+ }
+ footer p{
+  color: #f6f6f6;
+  font-size: 22px;
+ }
+}

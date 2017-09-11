@@ -1,0 +1,11 @@
+section(id='contact')
+ h1 Kontakta
+ div(class='contactcontent')
+  div(class='contactinfo')
+   p Behöver Du ha hjälp med att utveckla Din nya webbplats, skicka en förfrågan via formuläret så tar vi kontakt med dig inom kort.
+  div(class='contactform')
+   form(method="post" name="myemailform" action="mail.php" accept-charset="utf-8")
+     input(type="text" name="name" placeholder="Namn" class="msginput")
+     input(type="text" name="epost" placeholder="E-post" class="msginput")
+     textarea(type="text" name="message" placeholder="Skriv ett meddelande..." id="msg")
+     input(type="submit" name="submit" id="skicka")
