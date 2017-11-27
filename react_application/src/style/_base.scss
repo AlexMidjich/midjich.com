@@ -1,0 +1,37 @@
+
+/***************************************
+ Variables
+****************************************/
+
+$default-color: #fff;
+$text-color: #333;
+$font-size-text: 18px;
+$font-size-title: 26px;
+$font-size-heading: 36px;
+
+/***************************************
+Globals
+****************************************/
+
+h2{
+ margin: 0;
+ font-size: $font-size-title;
+}
+
+p{
+ color: $text-color;
+ font-size: $font-size-text;
+}
+
+.divider{
+ border: 2px solid;
+ width: 20%;
+ margin: 0;
+}
+
+@mixin flex-center-column {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
