@@ -5,8 +5,7 @@ class About extends Component {
  render(){
   return(
    <section className="about-page">
-    <h2>About</h2>
-    <hr className="divider"/>
+    
    </section>
   );
  }
