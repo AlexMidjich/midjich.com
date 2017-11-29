@@ -1,18 +1,1 @@
 @import "./base";
-
-.contact-page-link{
- width: 100%;
- height: 100vh;
- background-color: $default-color;
- @include flex-center-column;
- a{
-  font-size: $font-size-title;
- }
- &:hover{
-  background-color: rgba(3, 3, 3, 0.8);
-  color: $default-color;
-  a{
-   color: $default-color;
-  }
- }
-}

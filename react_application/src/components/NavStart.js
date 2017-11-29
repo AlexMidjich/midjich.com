@@ -13,24 +13,31 @@ class NavStart extends Component {
   render() {
     return (
      <Router>
-      <section className="content">
+      <section className="nav-content">
        <div className="about">
-        <div className="about-page-link">
-         <NavLink exact activeClassName='activeNow' to='/about'>About</NavLink>
-         <hr className="divider"/>
-        </div>
+        <NavLink exact activeClassName='activeNow' to='/about' onClick={ this.props.toggleMenu }>
+          <div className="about-page-link" >
+            <h2>Om mig</h2>
+            <hr className="divider"/>
+          </div>
+        </NavLink>
+
        </div>
        <div className="work">
-        <div className="work-page-link">
-         <NavLink activeClassName='activeNow' to='/work' >Work</NavLink>
-         <hr className="divider"/>
-        </div>
+        <NavLink activeClassName='activeNow' to='/work' onClick={ this.props.toggleMenu }>
+          <div className="work-page-link">
+           <h2>Portfolio</h2>
+           <hr className="divider"/>
+          </div>
+        </NavLink>
        </div>
        <div className="contact">
-        <div className="contact-page-link">
-         <NavLink activeClassName='activeNow' to='/contact' >Contact</NavLink>
-         <hr className="divider"/>
-        </div>
+        <NavLink activeClassName='activeNow' to='/contact' onClick={ this.props.toggleMenu }>
+          <div className="contact-page-link">
+           <h2>Kontakt</h2>
+           <hr className="divider"/>
+          </div>
+        </NavLink>
        </div>
 
        <Route exact path='/about' component={About}/>

@@ -4,10 +4,27 @@ import NavSec from './NavSec';
 import '../style/styles.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuToggle: true,
+    }
+  }
+
+  toggleMenu = () => {
+    this.setState({ menuToggle: !this.state.menuToggle })
+  }
+
   render() {
+
     return (
-     // <NavStart />
-     <NavSec />
+      <div>
+        { this.state.menuToggle ?
+          <NavStart toggleMenu={ this.toggleMenu }/>
+          :
+          <NavSec />
+        }
+      </div>
     );
   }
 }

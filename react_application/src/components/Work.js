@@ -5,9 +5,7 @@ class Work extends Component {
  render(){
   return(
    <section className="work-page">
-    <div className="hero">
-sad
-    </div>
+     <h1>Hallå!</h1>
    </section>
   );
  }
