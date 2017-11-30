@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import About from './About';
 import Work from './Work';
 import Contact from './Contact'
+import Admin from './Admin'
 import '../style/styles.css';
 import {
   BrowserRouter as Router,
@@ -46,6 +47,7 @@ class NavSec extends Component {
         <Route exact path='/about' component={About}/>
         <Route path='/work' component={Work}/>
         <Route path='/contact' component={Contact}/>
+        <Route path='/admin' component={Admin}/>
        </div>
      </Router>
     </div>

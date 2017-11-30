@@ -16,13 +16,14 @@ class App extends Component {
   }
 
   render() {
-
+    const path = window.location.pathname;
+    console.log(path);
     return (
       <div>
-        { this.state.menuToggle ?
-          <NavStart toggleMenu={ this.toggleMenu }/>
-          :
+        { path === '/work' || path === '/about' || path === '/contact' || path === '/admin' ?
           <NavSec />
+          :
+          <NavStart toggleMenu={ this.toggleMenu }/>
         }
       </div>
     );

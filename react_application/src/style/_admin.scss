@@ -1,0 +1,13 @@
+@import "./base";
+
+.admin-page{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  @include flex-center-column;
+  .admin-inputs{
+    width: 100%;
+    @include flex-center-column;
+  }
+}

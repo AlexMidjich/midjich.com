@@ -1,8 +1,35 @@
 @import "./base";
 
 .work-page{
- width: 100%;
- height: 100vh;
- display: flex;
- justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  @include flex-center-column;
+  .hero{
+    @include hero;
+  }
+  .page-wrapper{
+    width: 70%;
+    text-align: center;
+    .cases{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .big-case{
+        width: 100%;
+        height: 200px;
+        background-color: red;
+        margin: 10px 0 10px 0;
+      }
+      .small-case{
+        width: 45%;
+        height: 200px;
+        background-color: red;
+        margin: 10px 5% 10px 0;
+      }
+    }
+  }
 }

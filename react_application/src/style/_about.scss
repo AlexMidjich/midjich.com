@@ -11,12 +11,7 @@
  height: auto;
  @include flex-center-column;
  .hero{
-  background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  @include flex-center-column;
-  color: $default-color;
+  @include hero;
  }
  .about-text{
   width: 80%;
