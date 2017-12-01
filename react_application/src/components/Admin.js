@@ -8,6 +8,7 @@ class Admin extends Component {
     this.state = {
       title: '',
       description: '',
+      img: '',
       cases: []
     }
     this.handleChange = this.handleChange.bind(this);
@@ -25,7 +26,8 @@ class Admin extends Component {
         newState.push({
           id: item,
           title: cases[item].title,
-          description: cases[item].description
+          description: cases[item].description,
+          img: cases[item].img
         });
       }
       this.setState({
@@ -47,13 +49,15 @@ class Admin extends Component {
     const casesRef = firebase.database().ref('cases');
     const item = {
       title: this.state.title,
-      description: this.state.description
+      description: this.state.description,
+      img: this.state.img
     }
     //Restore inputfields
     casesRef.push(item);
     this.setState({
       title: '',
-      description: ''
+      description: '',
+      img: ''
     });
   }
   //Delete inputs
@@ -69,14 +73,15 @@ class Admin extends Component {
         <h3>{item.title}</h3>
         <p>{item.description}</p>
         <button onClick={() => this.removeItem(item.id)}>Ta bort</button>
+        <img src='{item.img}' />
       </div>
      )
    })
    return(
     <section className="admin-page">
       <h1>Admin panel</h1>
-      <div className="admin-inputs">
-        <form onSubmit={this.handleSubmit}>
+      <div>
+        <form onSubmit={this.handleSubmit} className="admin-inputs">
           <input
             type="text"
             name="title"
@@ -91,10 +96,15 @@ class Admin extends Component {
             onChange={this.handleChange}
             value={this.state.description}>
           </textarea>
+          <input
+            type="text"
+            name="img"
+            onChange={this.handleChange}
+            value={this.state.img} />
           <button>Lägg till</button>
         </form>
-        { projects }
       </div>
+      { projects }
     </section>
   );
  }

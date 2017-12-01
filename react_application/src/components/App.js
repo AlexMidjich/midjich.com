@@ -20,7 +20,7 @@ class App extends Component {
     console.log(path);
     return (
       <div>
-        { path === '/work' || path === '/about' || path === '/contact' || path === '/admin' ?
+        { path === '/work' || path === '/about' || path === '/contact' || path === '/admin' || path === '/test' ?
           <NavSec />
           :
           <NavStart toggleMenu={ this.toggleMenu }/>

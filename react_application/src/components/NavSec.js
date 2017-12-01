@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import About from './About';
 import Work from './Work';
-import Contact from './Contact'
-import Admin from './Admin'
+import Contact from './Contact';
+import Admin from './Admin';
+import Test from './Test';
 import '../style/styles.css';
 import {
   BrowserRouter as Router,
@@ -48,6 +49,7 @@ class NavSec extends Component {
         <Route path='/work' component={Work}/>
         <Route path='/contact' component={Contact}/>
         <Route path='/admin' component={Admin}/>
+        <Route path='/test' component={Test}/>
        </div>
      </Router>
     </div>
