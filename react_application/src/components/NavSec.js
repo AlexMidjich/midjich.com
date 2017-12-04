@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import About from './About';
 import Work from './Work';
-import Contact from './Contact';
-import Admin from './Admin';
-import Test from './Test';
 import '../style/styles.css';
 import {
   BrowserRouter as Router,
@@ -12,13 +9,12 @@ import {
 } from 'react-router-dom'
 
 class NavSec extends Component {
-  constructor(props) {
-    super(props);
+  constructor(){
+    super();
     this.state = {
       menuHide: false,
     }
   }
-
   hideMenu = () => {
     this.setState({ menuHide: !this.state.menuHide })
   }
@@ -28,7 +24,6 @@ class NavSec extends Component {
        <ul>
         <li><NavLink exact activeClassName='activeNow' to='/about'>Om mig</NavLink></li>
         <li><NavLink activeClassName='activeNow' to='/work' >Portfolio</NavLink></li>
-        <li><NavLink activeClassName='activeNow' to='/contact' >Kontakt</NavLink></li>
        </ul>
     :
     null;
@@ -46,10 +41,8 @@ class NavSec extends Component {
          { menu }
         </div>
         <Route exact path='/about' component={About}/>
-        <Route path='/work' component={Work}/>
-        <Route path='/contact' component={Contact}/>
-        <Route path='/admin' component={Admin}/>
-        <Route path='/test' component={Test}/>
+        <Route path='/work' component={Work} />
+
        </div>
      </Router>
     </div>

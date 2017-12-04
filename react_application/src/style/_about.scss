@@ -15,9 +15,20 @@
  }
  .about-text{
   width: 80%;
-  text-align: center;
-  .wrapper{
-
+  ul {
+   list-style-type: none;
+   padding: 0;
+   li{
+    padding-top: 10px;
+   }
+  }
+ }
+ .about-contact{
+  padding: 50px 0 0 0;
+  width: 80%;
+  @include flex-center-row;
+  a{
+   color: $default-color;
   }
  }
 }

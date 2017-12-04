@@ -35,6 +35,36 @@ a{
  margin: 0;
 }
 
+.btn{
+  width: 100%;
+  padding: 10px 0 10px 0;
+  margin: 10px 0 0 0;
+  background-color: navy;
+  border: none;
+  border-radius: 10px;
+  color: $default-color;
+  font-size: $font-size-text;
+  cursor: pointer;
+}
+.btn-round{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: $default-color;
+  font-size: $font-size-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.fa {
+ font-size: $font-size-title;
+}
+
 /***************************************
 Mixins
 ****************************************/
@@ -67,6 +97,13 @@ Mixins
  justify-content: center;
  flex-direction: column;
 }
+@mixin flex-center-row {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
 @mixin hero {
   background: linear-gradient(to bottom right, #2AB7FF, #5EFFB2);
   width: 100%;
@@ -75,18 +112,31 @@ Mixins
   @include flex-center-column;
   color: $default-color;
 }
+@mixin input-fields {
+  input{
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-text;
+  }
+}
+
 /***************************************
 Media breakpoints
 ****************************************/
-@media (min-width: 480px){
-
-}
-@media (min-width: 840px){
-
-}
-@media (min-width: 1024px){
-
-}
-@media (min-width: 1280px){
-
-}
+// @media (min-width: 480px){
+//
+// }
+// @media (min-width: 840px){
+//
+// }
+// @media (min-width: 1024px){
+//
+// }
+// @media (min-width: 1280px){
+//
+// }

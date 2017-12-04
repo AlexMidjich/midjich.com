@@ -1,13 +1,28 @@
 @import "./base";
 
+.wrapper{
+  width: 100%;
+}
 .admin-page{
-  position: absolute;
-  top: 0;
   width: 100%;
   height: auto;
-  @include flex-center-column;
+  background-color: rgba(3, 3, 3, 0.8);
+  color: $default-color;
+  padding: 50px 0 50px 0;
+  @include flex-center-row;
+  .btn-round{
+   background-color: #000;
+  }
   .admin-inputs{
     width: 100%;
-    @include flex-center-column;
+    @include flex-center-row;
+    @include input-fields;
+    textarea{
+      width: 100%;
+      height: 100px;
+      border: none;
+      margin: 10px 70px 0px 0px;
+      border-radius: 10px;
+    }
   }
 }

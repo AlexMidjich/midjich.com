@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import About from './About';
 import Work from './Work';
-import Contact from './Contact'
 import '../style/styles.css';
 import {
   BrowserRouter as Router,
@@ -31,18 +30,9 @@ class NavStart extends Component {
           </div>
         </NavLink>
        </div>
-       <div className="contact">
-        <NavLink activeClassName='activeNow' to='/contact' onClick={ this.props.toggleMenu }>
-          <div className="contact-page-link">
-           <h2>Kontakt</h2>
-           <hr className="divider"/>
-          </div>
-        </NavLink>
-       </div>
 
        <Route exact path='/about' component={About}/>
        <Route path='/work' component={Work}/>
-       <Route path='/contact' component={Contact}/>
 
       </section>
     </Router>

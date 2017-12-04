@@ -10,19 +10,55 @@
     @include hero;
   }
   .page-wrapper{
-    width: 70%;
+    width: 100%;
     text-align: center;
+    height: auto;
+    padding: 50px 0 50px 0;
     .cases{
       width: 100%;
       height: auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      padding: 50px 0 0 0;
       .big-case{
         width: 100%;
-        height: 200px;
-        background-color: red;
-        margin: 10px 0 10px 0;
+        height: 250px;
+        position: relative;
+        img{
+         width: 100%;
+         height: 250px;
+        }
+        .case-info{
+         background-color: rgba(42, 183, 255, 1);
+         width: 100%;
+         height: 250px;
+         @include flex-center-column;
+         opacity: 0;
+         transition: 200ms ease-in-out;
+         position: absolute;
+         top: 0;
+         z-index: 2;
+        }
+        .case-info:hover{
+         opacity: 1;
+        }
+        .case-text{
+         height: 170px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         color: $default-color;
+         p { color: $default-color; }
+        }
+        .button-wrapper{
+         display: flex;
+         flex-direction: row;
+        }
+        a{
+         color: $default-color;
+        }
       }
       .small-case{
         width: 45%;

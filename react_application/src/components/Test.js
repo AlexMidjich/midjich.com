@@ -1,51 +1,50 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import FileUploader from 'react-firebase-file-uploader';
 
 class Test extends Component {
-  state = {
-    username: '',
-    avatar: '',
-    isUploading: false,
-    progress: 0,
-    avatarURL: ''
-  };
+ state = {
+  bilder: '',
+  pics: []
+ }
 
-  handleChangeUsername = (event) => this.setState({username: event.target.value});
-  handleUploadStart = () => this.setState({isUploading: true, progress: 0});
-  handleProgress = (progress) => this.setState({progress});
-  handleUploadError = (error) => {
-    this.setState({isUploading: false});
-    console.error(error);
+ componentDidMount(){
+  const storeRef = firebase.storage().ref('sweet_gifs');
+  storeRef.on('value', (snapshot) => {
+   console.log(snapshot.val());
+   // let bilder = snapshot.val();
+  //  let newState = [];
+  //  for (let item in sweet_gifs) {
+  //   newState.push({
+  //    bilder: sweet_gifs[item].bilder
+  //   });
+  //  }
+  //  this.setState({
+  //   pics: newState
+  //  });
+  });
+ }
+
+
+ change(e) {
+   this.setState({
+     [e.target.name]: e.target.value
+   });
+ }
+
+ upload(e){
+  e.preventDefault();
+  const storeRef = firebase.storage().ref('sweet_gifs')
+  const item = {
+   bilder: this.state.bilder
   }
-  handleUploadSuccess = (filename) => {
-    this.setState({avatar: filename, progress: 100, isUploading: false});
-    firebase.storage().ref('images').child(filename).getDownloadURL().then(url => this.setState({avatarURL: url}));
-  };
+ }
+
 
   render() {
     return (
       <div>
-        <form>
-          <label>Username:</label>
-          <input type="text" value={this.state.username} name="username" onChange={this.handleChangeUsername} />
-          <label>Avatar:</label>
-          {this.state.isUploading &&
-            <p>Progress: {this.state.progress}</p>
-          }
-          {this.state.avatarURL &&
-            <img src={this.state.avatarURL} />
-          }
-          <FileUploader
-            accept="image/*"
-            name="avatar"
-            randomizeFilename
-            storageRef={firebase.storage().ref('images')}
-            onUploadStart={this.handleUploadStart}
-            onUploadError={this.handleUploadError}
-            onUploadSuccess={this.handleUploadSuccess}
-            onProgress={this.handleProgress}
-          />
+        <form onSubmit={this.upload}>
+         <input type="file" name="bilder" onChange={this.change} value={this.bilder} />
         </form>
       </div>
     );
