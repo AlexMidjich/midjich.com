@@ -13,6 +13,10 @@ class NavStart extends Component {
     return (
      <Router>
       <section className="nav-content">
+       <div className="page-title">
+        <h1>Alexander Midjich</h1>
+        <h2>Webbutvecklare</h2>
+       </div>
        <div className="about">
         <NavLink exact activeClassName='activeNow' to='/about' onClick={ this.props.toggleMenu }>
           <div className="about-page-link" >

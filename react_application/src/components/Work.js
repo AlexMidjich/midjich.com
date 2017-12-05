@@ -141,7 +141,7 @@ class Work extends Component {
         <h1>Portfolio</h1>
       </div>
       <div className="page-wrapper">
-        <h2>Här visas ett axplock av de projekt jag arbetat med</h2>
+        <h2>Några projekt som jag jobbat med.</h2>
         <div className="cases">
           { projects }
         </div>

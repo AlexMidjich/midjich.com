@@ -4,18 +4,24 @@
 ****************************************/
 
 $default-color: #fff;
+$sec-text-color: #f6f6f6;
 $text-color: #333;
 $font-size-text: 18px;
 $font-size-title: 26px;
 $font-size-heading: 36px;
+$font-size-big: 50px;
 
 /***************************************
 Globals
 ****************************************/
-
+h1{
+ font-size: 36px;
+ color: $text-color;
+}
 h2{
  margin: 0;
  font-size: $font-size-title;
+ color: $text-color;
 }
 
 p{
@@ -42,7 +48,7 @@ a{
   background-color: navy;
   border: none;
   border-radius: 10px;
-  color: $default-color;
+  color: $sec-text-color;
   font-size: $font-size-text;
   cursor: pointer;
 }
@@ -52,7 +58,7 @@ a{
   border-radius: 50%;
   border: none;
   background-color: #333;
-  color: $default-color;
+  color: $sec-text-color;
   font-size: $font-size-text;
   display: flex;
   align-items: center;
@@ -82,11 +88,11 @@ Mixins
 @mixin menu-hover {
   &:hover{
    background-color: rgba(3, 3, 3, 0.8);
-   color: $default-color;
+   color: $sec-text-color;
    position: relative;
    z-index: 2;
    box-shadow: 10px 10px 10px #888, -10px -10px 10px #888;
-   a{
+   h2{
     color: $default-color;
    }
   }
@@ -110,7 +116,10 @@ Mixins
   height: 30vh;
   display: flex;
   @include flex-center-column;
-  color: $default-color;
+  h1,
+  h2{
+   color: $sec-text-color;
+  }
 }
 @mixin input-fields {
   input{
