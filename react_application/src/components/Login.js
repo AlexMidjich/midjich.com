@@ -13,7 +13,7 @@ class Login extends Component {
      <section className="login-page">
       <form className="login-inputs" onSubmit={this.props.register}>
         <input
-         type="text"
+         type="email"
          name="email"
          placeholder="E-post"
          onChange={this.props.handleChange}

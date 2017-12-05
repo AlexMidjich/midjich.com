@@ -18,6 +18,7 @@ class Work extends Component {
       pageURL: '',
       github: '',
       cases: [],
+      errormsg: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,7 +65,8 @@ class Work extends Component {
   //Sign in with user using email and password
   signIn = () => {
     firebase.auth()
-    .signInWithEmailAndPassword(this.state.email, this.state.password)
+    .signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
+    })
   }
   // Get value from inputfields and store it in the corresponding state
   handleChange(e) {
@@ -146,6 +148,7 @@ class Work extends Component {
         <h1>Portfolio</h1>
       </div>
       <div className="page-wrapper">
+        { this.state.errormsg }
         <h2>Några projekt som jag jobbat med.</h2>
         <div className="cases">
           { projects }
@@ -156,6 +159,8 @@ class Work extends Component {
         title={this.state.title}
         description={this.state.description}
         background={this.state.background}
+        pageURL={this.state.pageURL}
+        github={this.state.github}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
       />

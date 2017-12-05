@@ -57,6 +57,7 @@ class About extends Component {
       <div className="right-side-block">
       </div>
      </div>
+     <Footer />
     </section>
   );
  }
