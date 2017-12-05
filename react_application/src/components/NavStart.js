@@ -20,8 +20,10 @@ class NavStart extends Component {
        <div className="about">
         <NavLink exact activeClassName='activeNow' to='/about' onClick={ this.props.toggleMenu }>
           <div className="about-page-link" >
-            <h2>Om mig</h2>
-            <hr className="divider"/>
+            <div className="page-link-content">
+              <h2>Om mig</h2>
+              <hr className="divider"/>
+            </div>
           </div>
         </NavLink>
 
@@ -29,9 +31,11 @@ class NavStart extends Component {
        <div className="work">
         <NavLink activeClassName='activeNow' to='/work' onClick={ this.props.toggleMenu }>
           <div className="work-page-link">
-           <h2>Portfolio</h2>
-           <hr className="divider"/>
-          </div>
+            <div className="page-link-content">
+              <h2>Portfolio</h2>
+              <hr className="divider"/>
+            </div>
+          </div>  
         </NavLink>
        </div>
 

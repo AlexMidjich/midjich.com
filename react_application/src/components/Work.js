@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Admin from './Admin';
 import Login from './Login';
+import Footer from './Footer';
 import firebase from '../firebase';
 import '../style/styles.css';
 
@@ -112,18 +113,22 @@ class Work extends Component {
         </div>
         <div className="button-wrapper">
         {item.pageURL ?
-         <div className="btn-round">
-          <a href={item.pageURL} target="_blank"><i className="fa fa-eye" aria-hidden="true"></i></a>
-         </div>
+          <a href={item.pageURL} target="_blank">
+           <div className="btn-round">
+            <i className="fa fa-eye" aria-hidden="true"></i>
+           </div>
+          </a>
          :
-         null
+          null
         }
         {item.github ?
-         <div className="btn-round">
-          <a href={item.github} target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
-         </div>
+          <a href={item.github} target="_blank">
+           <div className="btn-round">
+            <i className="fa fa-github" aria-hidden="true"></i>
+           </div>
+          </a>
          :
-         null
+          null
         }
          {this.state.user && this.state.user.email ?
           <button className="btn-round" onClick={() => this.removeItem(item.id)}><i className="fa fa-trash" aria-hidden="true"></i></button>
@@ -162,7 +167,8 @@ class Work extends Component {
         email={this.email}
         password={this.password}
       />
-  }
+      }
+      <Footer />
     </section>
   );
  }

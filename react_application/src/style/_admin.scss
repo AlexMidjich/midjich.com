@@ -1,5 +1,9 @@
 @import "./base";
 
+/***************************************
+ Admin
+****************************************/
+
 .wrapper{
   width: 100%;
 }
@@ -10,6 +14,9 @@
   color: $default-color;
   padding: 50px 0 50px 0;
   @include flex-center-row;
+  h1{
+    color: $sec-text-color;
+  }
   .btn-round{
    background-color: #000;
   }

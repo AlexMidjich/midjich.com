@@ -1,9 +1,76 @@
 @import "./base";
 
-@media (min-width: 840px){
+/***************************************
+ Media queries
+****************************************/
 
+/***************************************
+Breakpoint for xsmall screens
+****************************************/
+@media (min-width: 480px){
+  .work-page{
+    .page-wrapper{
+      width: 100%;
+      .cases{
+        .big-case{
+          width: 50%;
+          height: 250px;
+          padding: 0;
+          img{
+           width: 100%;
+           height: 250px;
+          }
+          .case-info{
+           background-color: rgba(42, 183, 255, 0.8);
+           height: 250px;
+           opacity: 0;
+           position: absolute;
+           padding: 0;
+          }
+          .case-text{
+           height: 250px;
+          }
+        }
+      }
+    }
+  }
 }
 
+/***************************************
+Breakpoint for small screens
+****************************************/
+@media (min-width: 840px){
+  .work-page{
+    .page-wrapper{
+      width: 80%;
+      .cases{
+        .big-case{
+          width: 50%;
+          height: 300px;
+          padding: 0;
+          img{
+           width: 100%;
+           height: 300px;
+          }
+          .case-info{
+           background-color: rgba(42, 183, 255, 0.8);
+           height: 300px;
+           opacity: 0;
+           position: absolute;
+           padding: 0;
+          }
+          .case-text{
+           height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/***************************************
+Breakpoint for medium screens
+****************************************/
 @media (min-width: 1024px){
  h1{
   font-size: $font-size-big;
@@ -17,6 +84,14 @@
      position: absolute;
      top: 0;
      @include flex-center-column;
+     h1,
+     h2{
+       background: -webkit-linear-gradient(#eee, #fff);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       position: relative;
+       z-index: 5;
+     }
     }
     .about{
       height: 100vh
@@ -29,8 +104,74 @@
     }
   }
   .hamburger-btn{
-    height: 50px;
+    height: 75px;
   }
+  .work-page{
+    .page-wrapper{
+      width: 70%;
+      .cases{
+        .big-case{
+          width: 50%;
+          height: 300px;
+          padding: 0;
+          img{
+           width: 100%;
+           height: 300px;
+          }
+          .case-info{
+           background-color: rgba(42, 183, 255, 0.8);
+           height: 300px;
+           opacity: 0;
+           position: absolute;
+           padding: 0;
+          }
+          .case-text{
+           height: 250px;
+          }
+        }
+      }
+    }
+  }
+  .login-page{
+    background-color: rgba(42, 183, 255, 0.8);
+    width: 50%;
+    height: 75px;
+    position: absolute;
+    top: 30vh;
+    z-index: 10;
+    @include flex-center-row;
+    .login-inputs{
+      width: 80%;
+      @include flex-center-row;
+      input{
+        width: 40%;
+        height: 30px;
+        margin: 0 0 0 10px;
+        padding: 0px;
+        border: 0.1px solid;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+    }
+    .btn-login{
+     width: 80%;
+    }
+  }
+  .admin-page{
+    width: 100%;
+    .admin-inputs{
+     textarea{
+       height: 180px;
+       margin: 10px 10px 0px 30px;
+     }
+   }
+  }
+}
+
+/***************************************
+Breakpoint for large screens
+****************************************/
+@media (min-width: 1280px){
   .work-page{
     .page-wrapper{
       width: 70%;
@@ -45,7 +186,7 @@
           }
           .case-info{
            background-color: rgba(42, 183, 255, 0.8);
-           height: 350px;
+           height: 300px;
            opacity: 0;
            position: absolute;
            padding: 0;
@@ -57,44 +198,4 @@
       }
     }
   }
-  .login-page{
-    width: 30%;
-  }
-  .admin-page{
-    width: 70%;
-    .admin-inputs{
-     textarea{
-       height: 180px;
-       margin: 10px 10px 0px 30px;
-     }
-   }
-  }
-  // .about-page{
-  //  position: absolute;
-  //  top: 0;
-  //  width: 100%;
-  //  height: auto;
-  //  @include flex-center-column;
-  //  .hero{
-  //   @include hero;
-  //  }
-  //  .about-text{
-  //   width: 100%;
-  //   ul {
-  //    list-style-type: none;
-  //    padding: 0;
-  //    li{
-  //     padding-top: 10px;
-  //    }
-  //   }
-  //  }
-  //  .about-contact{
-  //   padding: 50px 0 0 0;
-  //   width: 80%;
-  //   @include flex-center-row;
-  //   a{
-  //    color: $default-color;
-  //   }
-  //  }
-  // }
 }

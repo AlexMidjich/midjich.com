@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
 import '../style/styles.css';
 
 class About extends Component {
@@ -19,7 +20,8 @@ class About extends Component {
       <div className="left-side-block">
       </div>
       <div className="content-wrapper">
-       <p>Utbildad webbutvecklare med inriktning mot JavaScript och frontend. tekniker jag arbetar med är:</p>
+       <p>Utbildad webbutvecklare med inriktning mot JavaScript och frontend.</p>
+       <p>Tekniker jag arbetar med är:</p>
        <ul>
         <li>HTML5</li>
         <li>CSS3, sass, Bootstrap</li>
@@ -31,18 +33,26 @@ class About extends Component {
      </div>
      <div className="about-contact">
       <div className="contact-wrapper">
-       <div className="btn-round">
-        <a href="https://github.com/AlexMidjich" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
-       </div>
-       <div className="btn-round">
-        <a href="https://www.facebook.com/alexander.midjich" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-       </div>
-       <div className="btn-round">
-        <a href="https://www.linkedin.com/in/alexander-midjich-2031b751/" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-       </div>
-       <div className="btn-round">
-        <a href="mailto:alexander@midjich.com"><i className="fa fa-envelope" aria-hidden="true"></i></a>
-       </div>
+       <a href="https://github.com/AlexMidjich" target="_blank" rel="noopener noreferrer">
+         <div className="btn-round">
+           <i className="fa fa-github" aria-hidden="true"></i>
+         </div>
+       </a>
+       <a href="https://www.facebook.com/alexander.midjich" target="_blank" rel="noopener noreferrer">
+         <div className="btn-round">
+           <i className="fa fa-facebook" aria-hidden="true"></i>
+         </div>
+       </a>
+       <a href="https://www.linkedin.com/in/alexander-midjich-2031b751/" target="_blank" rel="noopener noreferrer">
+         <div className="btn-round">
+           <i className="fa fa-linkedin" aria-hidden="true"></i>
+         </div>
+       </a>
+       <a href="mailto:alexander@midjich.com">
+         <div className="btn-round">
+           <i className="fa fa-envelope" aria-hidden="true"></i>
+         </div>
+      </a>
       </div>
       <div className="right-side-block">
       </div>

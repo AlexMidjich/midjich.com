@@ -19,58 +19,65 @@ Navbar
   flex-direction: column;
   .page-title{
    width: 100%;
-   height: 10vh;
-   position: absolute;
-   top: 35%;
+   height: 33vh;
    animation: slideIn 1s ease-in-out;
    @include flex-center-column;
-   h1,
-   h2{
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-   }
    h1{
     font-size: $font-size-heading;
    }
   }
   .about{
-   width: 100%;
-   height: 50vh;
-   .about-page-link{
-    @include menu-content;
-    @include flex-center-column;
-    @include menu-hover;
-    h2,
-    hr{
-     animation: slideIn 3s ease-in-out;
+    width: 100%;
+    height: 33vh;
+    .about-page-link{
+      background-image: url("../img/slott.jpg");
+      background-position: center;
+      background-size: cover;
+      @include menu-content;
+      @include flex-center-row;
+      // @include menu-hover;
+      h2,
+      hr{
+        position: relative;
+        z-index: 5;
+        animation: slideIn 3s ease-in-out;
+        color: $sec-text-color;
+      }
     }
-   }
   }
   .work{
    width: 100%;
-   height: 50vh;
+   height: 33vh;
    .work-page-link{
-    @include menu-content;
-    @include flex-center-column;
-    @include menu-hover;
-    h2,
-    hr{
-     animation: slideIn 3s ease-in-out;
+      background-image: url("../img/code.jpg");
+      background-position: center;
+      background-size: cover;
+      @include menu-content;
+      @include flex-center-column;
+      // @include menu-hover;
+      h2,
+      hr{
+        position: relative;
+        z-index: 5;
+        animation: slideIn 3s ease-in-out;
+        color: $sec-text-color;
+      }
     }
-   }
+  }
+  .page-link-content{
+    width: 100%;
+    @include flex-center-column;
   }
 }
 
 .navbar{
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 75px;
   height: 70px;
-  background-color: rgba(3, 3, 3, 0.8);
-  border-radius: 0px 0% 60% 0%;
+
   ul{
     list-style-type: none;
     display: block;
@@ -94,14 +101,16 @@ Navbar
 }
 .hamburger-btn{
   position: relative;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 75px;
-  height: 8vh;
+  height: 75px;
+  background-color: rgba(3, 3, 3, 0.8);
+  border-radius: 0px 0% 60% 0%;
   .long-line{
     width: 35px;
     height: 1px;
@@ -114,4 +123,13 @@ Navbar
     background-color: $default-color;
     margin: 3px 0;
   }
+}
+
+@keyframes open {
+  from{ margin-left: -100%; width: 0px;}
+  to{ margin-left: 0%; width: 75px;}
+}
+
+.open{
+  animation: open 0.3s ease-in-out;
 }

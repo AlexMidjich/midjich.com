@@ -29,7 +29,7 @@ class Login extends Component {
          className="userinputs"
         />
       </form>
-      <button onClick={this.props.signIn} className="btn">Logga in <i className="fa fa-sign-in" aria-hidden="true"></i></button>
+      <button onClick={this.props.signIn} className="btn-round"><i className="fa fa-sign-in" aria-hidden="true"></i></button>
      </section>
   );
  }

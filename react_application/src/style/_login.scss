@@ -1,17 +1,21 @@
 @import "./base";
 
+/***************************************
+ Login
+****************************************/
+
 .login-page{
   width: 100%;
   height: 250px;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: rgba(3, 3, 3, 0.8 );
   @include flex-center-column;
   .login-inputs{
-    width: 80%;
+    // width: 80%;
     @include flex-center-column;
     @include input-fields;
   }
-  .btn{
+  .btn-login{
    width: 80%;
   }
 }
