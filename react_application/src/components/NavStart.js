@@ -6,7 +6,9 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink
-} from 'react-router-dom'
+} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+const history = createBrowserHistory();
 
 class NavStart extends Component {
   render() {
@@ -35,12 +37,12 @@ class NavStart extends Component {
               <h2>Portfolio</h2>
               <hr className="divider"/>
             </div>
-          </div>  
+          </div>
         </NavLink>
        </div>
 
-       <Route exact path='/about' component={About}/>
-       <Route path='/work' component={Work}/>
+       <Route exact path='/about' component={About} history={history}/>
+       <Route path='/work' component={Work} history={history}/>
 
       </section>
     </Router>

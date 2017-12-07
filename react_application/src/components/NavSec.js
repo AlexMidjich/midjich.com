@@ -7,7 +7,11 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink
-} from 'react-router-dom'
+} from 'react-router-dom';
+
+import createBrowserHistory from 'history/createBrowserHistory';
+const history = createBrowserHistory();
+
 
 class NavSec extends Component {
   constructor(){
@@ -42,8 +46,8 @@ class NavSec extends Component {
         <div className={classes}>
          { menu }
         </div>
-        <Route exact path='/about' component={About}/>
-        <Route path='/work' component={Work} />
+        <Route exact path='/about' component={About} history={history} />
+        <Route path='/work' component={Work} history={history} />
 
        </div>
      </Router>

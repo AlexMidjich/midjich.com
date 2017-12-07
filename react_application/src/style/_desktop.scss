@@ -27,9 +27,6 @@ Breakpoint for xsmall screens
            position: absolute;
            padding: 0;
           }
-          .case-text{
-           height: 250px;
-          }
         }
       }
     }
@@ -50,17 +47,14 @@ Breakpoint for small screens
           padding: 0;
           img{
            width: 100%;
-           height: 350px;
+           height: 300px;
           }
           .case-info{
-           background-color: red;
-           height: 350px;
+           background-color: rgba(42, 183, 255, 0.8);
+           height: 300px;
            opacity: 0;
            position: absolute;
            padding: 0;
-          }
-          .case-text{
-           height: 250px;
           }
         }
       }
@@ -125,9 +119,6 @@ Breakpoint for medium screens
            position: absolute;
            padding: 0;
           }
-          .case-text{
-           height: 250px;
-          }
         }
       }
     }
@@ -190,9 +181,6 @@ Breakpoint for large screens
            opacity: 0;
            position: absolute;
            padding: 0;
-          }
-          .case-text{
-           height: 250px;
           }
         }
       }
