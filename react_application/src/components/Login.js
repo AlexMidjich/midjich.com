@@ -11,25 +11,30 @@ class Login extends Component {
  render(){
    return(
      <section className="login-page">
-      <form className="login-inputs" onSubmit={this.props.register}>
-        <input
-         type="email"
-         name="email"
-         placeholder="E-post"
-         onChange={this.props.handleChange}
-         value={this.props.email}
-         className="userinputs"
-        />
-        <input
-         type="password"
-         name="password"
-         placeholder="Lösenord"
-         onChange={this.props.handleChange}
-         value={this.props.password}
-         className="userinputs"
-        />
-      </form>
-      <button onClick={this.props.signIn} className="btn-round"><i className="fa fa-sign-in" aria-hidden="true"></i></button>
+      <div className="login-fields">
+        <form className="login-inputs" onSubmit={this.props.register}>
+          <input
+           type="email"
+           name="email"
+           placeholder="E-post"
+           onChange={this.props.handleChange}
+           value={this.props.email}
+           className="userinputs"
+          />
+          <input
+           type="password"
+           name="password"
+           placeholder="Lösenord"
+           onChange={this.props.handleChange}
+           value={this.props.password}
+           className="userinputs"
+          />
+        </form>
+        <button onClick={this.props.signIn} className="btn-round"><i className="fa fa-sign-in" aria-hidden="true"></i></button>
+      </div>
+      <div className="error-field">
+        <p>{ this.props.errormsg }</p>
+      </div>
      </section>
   );
  }

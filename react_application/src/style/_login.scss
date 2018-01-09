@@ -10,12 +10,23 @@
   border-radius: 10px;
   background-color: rgba(3, 3, 3, 0.8 );
   @include flex-center-column;
-  .login-inputs{
-    // width: 80%;
+  .login-fields{
+    width: 100%;
     @include flex-center-column;
-    @include input-fields;
+    .login-inputs{
+      // width: 80%;
+      @include flex-center-column;
+      @include input-fields;
+    }
+    .btn-login{
+      width: 80%;
+    }
   }
-  .btn-login{
-   width: 80%;
+  .error-field{
+    p{
+      color: $default-color;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
   }
 }

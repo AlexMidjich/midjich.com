@@ -66,6 +66,15 @@ class Work extends Component {
   signIn = () => {
     firebase.auth()
     .signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
+      error.code === 'auth/invalid-email' ? this.setState({ errormsg: 'Fyll i en korrekt e-postadress!' })
+      :
+      null;
+      error.code === 'auth/wrong-password' ? this.setState({ errormsg: 'Fel lösenord' })
+      :
+      null;
+      error.code === 'auth/user-not-found' ? this.setState({ errormsg: 'Kunde inte hitta användaren' })
+      :
+      null;
     })
   }
   // Get value from inputfields and store it in the corresponding state
@@ -148,7 +157,6 @@ class Work extends Component {
         <h1>Portfolio</h1>
       </div>
       <div className="page-wrapper">
-        { this.state.errormsg }
         <h2>Några projekt som jag jobbat med.</h2>
         <div className="cases">
           { projects }
@@ -171,6 +179,7 @@ class Work extends Component {
         register={this.register}
         email={this.email}
         password={this.password}
+        errormsg={ this.state.errormsg }
       />
       }
       <Footer />
