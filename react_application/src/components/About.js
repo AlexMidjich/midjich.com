@@ -20,13 +20,13 @@ class About extends Component {
       <div className="left-side-block">
       </div>
       <div className="content-wrapper">
-       <p>Utbildad webbutvecklare med inriktning mot JavaScript och frontend.</p>
+       <h3>Utbildad webbutvecklare med inriktning mot JavaScript och frontend.</h3>
        <p>Tekniker jag arbetar med är:</p>
        <ul>
-        <li>HTML5</li>
-        <li>CSS3, sass, Bootstrap</li>
-        <li>JavaScript, jquery, React.js, node.js</li>
-        <li>Wordpress</li>
+        <li><i className="fab fa-html5"></i> HTML5</li>
+        <li><i className="fab fa-css3"></i> CSS3, sass, Bootstrap</li>
+        <li><i className="fab fa-js"></i> JavaScript, jquery, React.js, node.js</li>
+        <li><i className="fab fa-wordpress-simple"></i> Wordpress</li>
        </ul>
        <p>Läs mer om mig, mina projekt eller kontakta mig via knapparna nedan.</p>
       </div>
@@ -35,17 +35,17 @@ class About extends Component {
       <div className="contact-wrapper">
        <a href="https://github.com/AlexMidjich" target="_blank" rel="noopener noreferrer">
          <div className="btn-round">
-           <i className="fa fa-github" aria-hidden="true"></i>
+           <i className="fab fa-github" aria-hidden="true"></i>
          </div>
        </a>
        <a href="https://www.facebook.com/alexander.midjich" target="_blank" rel="noopener noreferrer">
          <div className="btn-round">
-           <i className="fa fa-facebook" aria-hidden="true"></i>
+           <i className="fab fa-facebook-f" aria-hidden="true"></i>
          </div>
        </a>
        <a href="https://www.linkedin.com/in/alexander-midjich-2031b751/" target="_blank" rel="noopener noreferrer">
          <div className="btn-round">
-           <i className="fa fa-linkedin" aria-hidden="true"></i>
+           <i className="fab fa-linkedin-in" aria-hidden="true"></i>
          </div>
        </a>
        <a href="mailto:alexander@midjich.com">

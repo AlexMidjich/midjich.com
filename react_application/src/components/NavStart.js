@@ -16,8 +16,8 @@ class NavStart extends Component {
      <Router>
       <section className="nav-content">
        <div className="page-title">
-        <h1>Alexander Midjich</h1>
-        <h2>Webbutvecklare</h2>
+       <h1>Webbutvecklare</h1>
+        <h2>Alexander Midjich</h2>
        </div>
        <div className="about">
         <NavLink exact activeClassName='activeNow' to='/about' onClick={ this.props.toggleMenu }>

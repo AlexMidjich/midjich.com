@@ -30,7 +30,7 @@ class Login extends Component {
            className="userinputs"
           />
         </form>
-        <button onClick={this.props.signIn} className="btn-round"><i className="fa fa-sign-in" aria-hidden="true"></i></button>
+        <button onClick={this.props.signIn} className="btn-round"><i className="fas fa-sign-in-alt" aria-hidden="true"></i></button>
       </div>
       <div className="error-field">
         <p>{ this.props.errormsg }</p>

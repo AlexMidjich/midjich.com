@@ -112,7 +112,7 @@ class Work extends Component {
     itemRef.remove();
   }
   renderSpinner() {
-    if (this.state.loading == false) {
+    if (this.state.loading === false) {
       return null;
     }
     return (
@@ -135,22 +135,22 @@ class Work extends Component {
         <div className="case-text">
          <h3>{item.title}</h3>
          <p>{item.description}</p>
-        </div>
-        <div className="button-wrapper">
         {item.pageURL ?
           <a href={item.pageURL} target="_blank">
-           <div className="btn-round">
-            <i className="fa fa-eye" aria-hidden="true"></i>
+           <div className="btn-project">
+            Besök sidan
            </div>
           </a>
          :
           null
         }
+        </div>
+        <div className="button-wrapper">
         {item.github ?
           <a href={item.github} target="_blank">
-           <div className="btn-round">
-            <i className="fa fa-github" aria-hidden="true"></i>
-           </div>
+             <div className="btn-round">
+              <i className="fab fa-github" aria-hidden="true"></i>
+             </div>
           </a>
          :
           null

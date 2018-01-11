@@ -13,7 +13,7 @@ class Admin extends Component {
    return(
      <section className="admin-page">
        <h1>Admin panel</h1>
-       <button onClick={this.signOut} className="btn-round"><i className="fa fa-sign-out" aria-hidden="true"></i></button>
+       <button onClick={this.signOut} className="btn-round"><i className="fas fa-sign-out-alt" aria-hidden="true"></i></button>
        <div className="wrapper">
          <form onSubmit={this.props.handleSubmit} className="admin-inputs">
           <div>
