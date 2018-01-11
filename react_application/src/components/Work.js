@@ -18,7 +18,8 @@ class Work extends Component {
       pageURL: '',
       github: '',
       cases: [],
-      errormsg: ''
+      errormsg: '',
+      loading: true,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -110,12 +111,25 @@ class Work extends Component {
     const itemRef = firebase.database().ref(`/cases/${itemId}`)
     itemRef.remove();
   }
+  renderSpinner() {
+    if (this.state.loading == false) {
+      return null;
+    }
+    return (
+      <span className="spinner" />
+    );
+  }
+  handleImageLoaded() {
+    this.setState({ loading: false })
+  }
+  handleImageError() {
+    this.setState({ loading: 'Något gick fel'})
+  }
 
  render(){
    const projects = this.state.cases.map((item) => {
      return (
-      <div key={item.id} className="big-case">
-
+      <div key={item.id} className="big-case" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageError.bind(this)}>
        <img src={item.background} alt="img" />
        <div className="case-info">
         <div className="case-text">
@@ -159,6 +173,8 @@ class Work extends Component {
       <div className="page-wrapper">
         <h2>Några projekt som jag jobbat med.</h2>
         <div className="cases">
+          {this.renderSpinner()}
+
           { projects }
         </div>
       </div>

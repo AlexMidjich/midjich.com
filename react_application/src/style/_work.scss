@@ -29,7 +29,7 @@
     }
   }
   .page-wrapper{
-    width: 100%;
+    max-width: 1280px;
     text-align: center;
     height: auto;
     padding: 50px 0 50px 0;
@@ -40,46 +40,55 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 50px 0 0 0;
+      .spinner {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
       .big-case{
         width: 100%;
         height: 250px;
         position: relative;
         padding: 10px 0 0 0;
         img{
-         width: 100%;
-         height: 250px;
+          width: 100%;
+          height: 100%;
         }
         .case-info{
-         background-color: rgba(42, 183, 255, 1);
-         width: 100%;
-         height: 250px;
-         @include flex-center-column;
-         opacity: 0;
-         transition: 200ms ease-in-out;
-         position: absolute;
-         top: 0;
-         z-index: 2;
-         padding: 0px 0 10px 0;
+          background-color: rgba(42, 183, 255, 1);
+          width: 100%;
+          height: 100%;
+          @include flex-center-column;
+          opacity: 0;
+          transition: 200ms ease-in-out;
+          position: absolute;
+          top: 0;
+          z-index: 2;
+          padding: 0px 0 10px 0;
         }
         .case-info:hover{
-         opacity: 1;
+          opacity: 1;
         }
         .case-text{
-         height: auto;
-         padding-bottom: 10px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: column;
-         color: $default-color;
-         p { color: $default-color; }
+          height: auto;
+          padding-bottom: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: $default-color;
+          p { color: $default-color; }
         }
         .button-wrapper{
-         display: flex;
-         flex-direction: row;
+          display: flex;
+          flex-direction: row;
+          padding: 2% 0 0 0;
         }
         a{
-         color: $default-color;
+          color: $default-color;
         }
       }
       .small-case{
@@ -90,4 +99,10 @@
       }
     }
   }
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
