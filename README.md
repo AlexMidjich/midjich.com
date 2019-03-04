@@ -49,4 +49,4 @@ A portfolio webpage - version 1.3 (Developed with react.js)
  <li>Version 1.3 - The current version made with React.js. </li>
 </ol></p>
 
-<a href="http://www.midjich.com">midjich.com</a> Here is a live version of the page.
+<a href="http://www.midjich.com/react-page">midjich.com/react-page</a> Here is a live version of the page.
